@@ -97,4 +97,4 @@ do {
     }
 } while (count($lines) > count($processedIndexes) && ++$loopCount < 1000);
 
-echo 'Answer: ' . $circuit->getWire('a')->getSignal() . PHP_EOL;
+echo 'Answer: A: ' . $circuit->getWire('a')->getSignal() . PHP_EOL;

@@ -1,0 +1,2 @@
+<?php
+echo strlen(implode('', file('input', FILE_IGNORE_NEW_LINES))) - strlen(implode('', array_map(function($line) { return trim(preg_replace('/"$/', '', preg_replace('/^"/', '', stripslashes(preg_replace_callback('/\\\x[0-9a-f]{2}/', function ($match) { return chr(hexdec($match[0])); }, $line)), 1), 1)); }, file('input', FILE_IGNORE_NEW_LINES))));
